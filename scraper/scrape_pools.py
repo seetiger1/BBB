@@ -65,13 +65,16 @@ def parse_pool(url: str) -> Dict:
 
     The parser is defensive: it attempts several heuristics and never raises
     on missing expected nodes — instead it keeps readable fallbacks.
+    
+    Hours are collected as lists (multiple entries per day, e.g., different times
+    for regular hours vs. holidays).
     """
     try:
         html = fetch_page(url)
     except Exception as e:
         return {
             "name": "(failed to fetch)",
-            "hours": {},
+            "hours": {wd: [] for wd in WEEKDAYS},
             "source_url": url,
             "fetched_at": datetime.now(timezone.utc).isoformat(),
             "error": str(e),
@@ -93,26 +96,29 @@ def parse_pool(url: str) -> Dict:
     if not name:
         name = url
 
-    # Hours: try to find table rows mentioning weekdays, otherwise look for 'Öffnungszeiten'
-    hours: Dict[str, str] = {}
+    # Hours: collect ALL entries per weekday (not just the first)
+    hours: Dict[str, List[str]] = {wd: [] for wd in WEEKDAYS}
 
-    # Search for table rows or list items that contain weekday names
-    found_any = False
+    # Search for rows/items that contain weekday names + their hours
     for tr in soup.find_all(["tr", "li", "p", "div"]):
         text = tr.get_text(separator=" ", strip=True)
-        if not text:
+        if not text or len(text) < 5:
             continue
+        
+        # Check if this element mentions a weekday
         for wd in WEEKDAYS:
             if wd.lower() in text.lower():
-                # try to split by ':' or '–' or '-' to get times
-                hours[wd] = text
-                found_any = True
-    if not found_any:
-        # fallback: find near 'Öffnungszeiten' label
+                # Found entry for this weekday — add it to the list
+                hours[wd].append(text)
+                break
+    
+    # If no hours found, try fallback
+    if not any(hours.values()):
         fallback = extract_text_near_label(soup, ["Öffnungszeiten", "Öffnungszeit", "Öffnen"])[:2000]
-        # assign same fallback to all weekdays to keep structure predictable
+        # assign same fallback to all weekdays
         for wd in WEEKDAYS:
-            hours[wd] = fallback
+            if fallback:
+                hours[wd] = [fallback]
 
     return {
         "name": name,

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"
 
 type Pool = {
   name: string
-  hours: Record<string, string>
+  hours: Record<string, string[] | string>
   source_url: string
   fetched_at: string
 }
@@ -81,7 +81,7 @@ export default function Page() {
       style={{
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         padding: "24px",
-        maxWidth: "900px",
+        maxWidth: "1000px",
         margin: "0 auto",
         backgroundColor: "#f9f9f9",
         minHeight: "100vh",
@@ -90,14 +90,14 @@ export default function Page() {
       <header style={{ marginBottom: 32 }}>
         <h1 style={{ color: "#0066cc", marginBottom: 8 }}>🏊 Berliner Bäder — Öffnungszeiten</h1>
         <p style={{ color: "#666", fontSize: 16, margin: 0 }}>
-          Heute: <strong>{todayWeekday}</strong>
+          Alle Wochentage (heute: <strong>{todayWeekday}</strong>)
         </p>
       </header>
 
       <div
         style={{
           display: "grid",
-          gap: "16px",
+          gap: "20px",
         }}
       >
         {pools.map((pool, idx) => (
@@ -111,27 +111,62 @@ export default function Page() {
               boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
             }}
           >
-            <h2 style={{ color: "#0066cc", marginTop: 0, marginBottom: 12, fontSize: 20 }}>
+            <h2 style={{ color: "#0066cc", marginTop: 0, marginBottom: 20, fontSize: 20 }}>
               {pool.name}
             </h2>
 
-            <div style={{ marginBottom: 12 }}>
-              <p style={{ margin: 0, fontWeight: 600, color: "#333", marginBottom: 4 }}>Heute geöffnet:</p>
-              <p
-                style={{
-                  margin: 0,
-                  padding: "8px 12px",
-                  backgroundColor: "#e8f4f8",
-                  borderLeft: "4px solid #0066cc",
-                  fontSize: 15,
-                  color: "#222",
-                  fontFamily: "monospace",
-                  whiteSpace: "pre-wrap",
-                  wordBreak: "break-word",
-                }}
-              >
-                {pool.hours[todayWeekday] ?? "❌ Geschlossen / Keine Daten"}
-              </p>
+            {/* Weekday grid */}
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+                gap: "12px",
+                marginBottom: 20,
+              }}
+            >
+              {["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"].map(
+                (day) => {
+                  const isToday = day === todayWeekday
+                  const hoursData = pool.hours[day]
+                  const hoursArray = Array.isArray(hoursData) ? hoursData : hoursData ? [hoursData] : []
+
+                  return (
+                    <div
+                      key={day}
+                      style={{
+                        padding: "12px",
+                        borderRadius: "6px",
+                        border: isToday ? "2px solid #0066cc" : "1px solid #e0e0e0",
+                        backgroundColor: isToday ? "#e8f4f8" : "#f5f5f5",
+                        fontWeight: isToday ? 600 : 400,
+                      }}
+                    >
+                      <p style={{ margin: "0 0 6px 0", color: "#333", fontSize: 13 }}>
+                        {isToday ? "📍 " : ""}{day}
+                      </p>
+                      <div style={{ fontSize: 12, color: "#555" }}>
+                        {hoursArray.length === 0 ? (
+                          <span style={{ color: "#999" }}>Keine Daten</span>
+                        ) : (
+                          hoursArray.map((hour, i) => (
+                            <div
+                              key={i}
+                              style={{
+                                marginBottom: i < hoursArray.length - 1 ? "4px" : 0,
+                                whiteSpace: "pre-wrap",
+                                wordBreak: "break-word",
+                                lineHeight: "1.4",
+                              }}
+                            >
+                              {hour}
+                            </div>
+                          ))
+                        )}
+                      </div>
+                    </div>
+                  )
+                }
+              )}
             </div>
 
             <div style={{ borderTop: "1px solid #eee", paddingTop: 12 }}>

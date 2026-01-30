@@ -22,3 +22,24 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 [2] Adding all changes...
+
+[3] Committing...
+[main 938a51c] fix: update API structure for Vercel compatibility (use Next.js API routes)
+ 7 files changed, 160 insertions(+), 16 deletions(-)
+ create mode 100644 api/index.py
+ create mode 100644 app/api/pools/route.ts
+ create mode 100644 next.config.js
+ create mode 100644 vercel_fix.log
+ create mode 100644 vercel_fix.sh
+
+[4] Pushing...
+To https://github.com/seetiger1/BBB
+   91d48dd..938a51c  main -> main
+
+[5] Files created/updated:
+  - api/index.py (backup, can remove)
+  - app/api/pools/route.ts (Next.js API route - replaces FastAPI)
+  - next.config.js (Next.js config)
+  - vercel.json (simplified for Vercel)
+
+=== Ready to redeploy on Vercel ===
