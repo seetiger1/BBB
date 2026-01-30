@@ -62,13 +62,11 @@ def extract_text_near_label(soup: BeautifulSoup, label_keywords: List[str]) -> s
 
 
 def parse_pool(url: str) -> Dict:
-    """Parse a single pool page and return a dict with required fields.
-
-    Uses structural HTML parsing: looks for opening hours tables with proper selectors.
-    Each weekday can have multiple entries (different activity types or times).
+    """Parse a single pool page with STRUCTURAL table parsing.
     
-    Expected format: Weekday | Time range | Activity type
-    E.g. "Montag | 06:30 - 08:00 Uhr | öffentl. Schwimmen"
+    Key improvement: Uses column-based approach instead of row scanning.
+    Each <table> column = one weekday. Multiple entries per day separated by <br> or newlines.
+    This guarantees NO mixing of weekday data.
     """
     try:
         html = fetch_page(url)
@@ -83,7 +81,7 @@ def parse_pool(url: str) -> Dict:
 
     soup = BeautifulSoup(html, "html.parser")
 
-    # Name: prefer <h1>, then <title>, then first strong tag
+    # Extract name
     name = None
     h1 = soup.find("h1")
     if h1 and h1.get_text(strip=True):
@@ -97,107 +95,119 @@ def parse_pool(url: str) -> Dict:
     if not name:
         name = url
 
-    # Hours: collect ALL entries per weekday
+    # Initialize hours
     hours: Dict[str, List[str]] = {wd: [] for wd in WEEKDAYS}
 
-    # Pattern to match complete time entries: HH:MM - HH:MM Uhr DESCRIPTION
-    time_entry_pattern = re.compile(
-        r'(\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}\s*Uhr\s+.{1,200}?)(?=\d{1,2}:\d{2}\s*-|\s*(?:Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)|$)',
-        re.IGNORECASE
-    )
+    # Pattern to extract time entries: HH:MM - HH:MM Uhr DESCRIPTION
+    time_pattern = re.compile(r'\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}\s*Uhr')
 
-    # Strategy 1: Look for <table> structures with opening hours
+    # STRUCTURAL APPROACH: Find table and use column indexing
     tables = soup.find_all('table')
     
     for table in tables:
-        rows = table.find_all('tr')
-        if not rows:
+        # Get header row to map columns to weekdays
+        header_row = table.find('thead')
+        if not header_row:
+            header_row = table.find('tr')
+        
+        if not header_row:
             continue
         
-        current_weekday = None
+        # Extract header cells (should contain weekday names)
+        header_cells = header_row.find_all(['th', 'td'])
+        if not header_cells:
+            continue
         
-        for row in rows:
-            row_text = row.get_text(separator=" ", strip=True)
-            if not row_text:
-                continue
-            
-            # Check if row contains a weekday name
-            for wd in WEEKDAYS:
-                if wd.lower() in row_text.lower():
-                    current_weekday = wd
-                    # Extract all time entries from this row
-                    cells = row.find_all(['td', 'th'])
-                    for cell in cells:
-                        cell_text = cell.get_text(separator=" ", strip=True)
-                        # Look for time patterns in cell
-                        matches = time_entry_pattern.findall(cell_text)
-                        for match in matches:
-                            entry = match.strip()
-                            # Remove weekday name if present at start
-                            entry = re.sub(rf'^({"|".join(WEEKDAYS)})\s*', '', entry, flags=re.IGNORECASE).strip()
-                            # Clean up extra whitespace
-                            entry = re.sub(r'\s+', ' ', entry).strip()
-                            # Add if valid (has time pattern and not too short)
-                            if len(entry) > 10 and re.search(r'\d{1,2}:\d{2}', entry):
-                                hours[current_weekday].append(entry)
+        # Map column index → weekday
+        column_to_day = {}
+        for col_idx, header_cell in enumerate(header_cells):
+            header_text = header_cell.get_text(strip=True).lower()
+            for weekday in WEEKDAYS:
+                if weekday.lower() in header_text:
+                    column_to_day[col_idx] = weekday
                     break
-
-    # Strategy 2: If table parsing didn't work, look for structured divs/lists with class hints
-    if not any(hours.values()):
-        # Look for elements with day/time related classes
-        for elem in soup.find_all(['div', 'li', 'p']):
-            elem_text = elem.get_text(separator=" ", strip=True)
-            if not elem_text or len(elem_text) < 10:
-                continue
+        
+        if not column_to_day:
+            # No valid weekday headers found, try next table
+            continue
+        
+        # Now process all rows in tbody (skip thead)
+        tbody = table.find('tbody')
+        if tbody:
+            data_rows = tbody.find_all('tr')
+        else:
+            # Fallback: use all rows after header
+            all_rows = table.find_all('tr')
+            data_rows = all_rows[1:] if len(all_rows) > 1 else []
+        
+        # Extract time entries from each cell
+        for row in data_rows:
+            cells = row.find_all(['td', 'th'])
             
-            # Check if element might contain hours (has time pattern)
-            if not re.search(r'\d{1,2}:\d{2}', elem_text):
-                continue
-            
-            # For each weekday, look for entries
-            for wd in WEEKDAYS:
-                if wd.lower() in elem_text.lower():
-                    # Extract everything after the weekday name
-                    idx = elem_text.lower().find(wd.lower())
-                    if idx >= 0:
-                        day_content = elem_text[idx + len(wd):]
-                        # Extract time entries
-                        entries = time_entry_pattern.findall(day_content)
-                        for entry in entries:
-                            entry = entry.strip()
-                            entry = re.sub(r'\s+', ' ', entry).strip()
-                            # Limit length to ~120 chars
-                            if len(entry) > 120:
-                                entry = entry[:120].rsplit(' ', 1)[0]
-                            if len(entry) > 10 and re.search(r'\d{1,2}:\d{2}', entry):
-                                if entry not in hours[wd]:  # avoid duplicates
-                                    hours[wd].append(entry)
-
-    # Strategy 3: Fallback - if still nothing found
+            for col_idx, cell in enumerate(cells):
+                if col_idx not in column_to_day:
+                    continue
+                
+                weekday = column_to_day[col_idx]
+                
+                # Get cell text, splitting by <br> to handle multiple entries
+                cell_lines = []
+                for line in cell.stripped_strings:
+                    line = line.strip()
+                    if line:
+                        cell_lines.append(line)
+                
+                # Also check for explicit <br> separation
+                br_chunks = []
+                for br in cell.find_all('br'):
+                    # Get text before br
+                    prev_text = ""
+                    elem = br.previous_sibling
+                    while elem:
+                        if isinstance(elem, str):
+                            prev_text = elem.strip() + prev_text
+                        elem = elem.previous_sibling
+                    if prev_text:
+                        br_chunks.append(prev_text)
+                
+                # Combine approaches
+                all_text = " ".join(cell_lines)
+                
+                # Split by newlines or multiple spaces (indicating separate entries)
+                entries_raw = re.split(r'[\n;]|\s{2,}', all_text)
+                
+                # Process each potential entry
+                for entry_raw in entries_raw:
+                    entry = entry_raw.strip()
+                    if not entry:
+                        continue
+                    
+                    # Must contain a time pattern
+                    if not time_pattern.search(entry):
+                        continue
+                    
+                    # Clean entry
+                    entry = re.sub(r'\s+', ' ', entry).strip()
+                    
+                    # Remove weekday name if accidentally included
+                    entry = re.sub(rf'^({"|".join(WEEKDAYS)})\s*', '', entry, flags=re.IGNORECASE).strip()
+                    
+                    # Limit length but keep at word boundary
+                    if len(entry) > 150:
+                        entry = entry[:150].rsplit(' ', 1)[0]
+                    
+                    # Add if valid and new
+                    if len(entry) >= 10:
+                        entry_lower = entry.lower()
+                        if not any(e.lower() == entry_lower for e in hours[weekday]):
+                            hours[weekday].append(entry)
+    
+    # Fallback if no table found
     if not any(hours.values()):
         fallback = extract_text_near_label(soup, ["Öffnungszeiten", "Öffnungszeit", "Öffnen"])[:500]
         if fallback:
-            # Try to parse fallback text for weekdays
             for wd in WEEKDAYS:
-                if wd.lower() in fallback.lower():
-                    idx = fallback.lower().find(wd.lower())
-                    content = fallback[idx:min(idx + 200, len(fallback))]
-                    entries = time_entry_pattern.findall(content)
-                    for entry in entries:
-                        entry = entry.strip()
-                        if len(entry) > 10:
-                            hours[wd].append(entry)
-
-    # Post-process: deduplicate per day
-    for wd in hours:
-        seen = set()
-        unique_entries = []
-        for entry in hours[wd]:
-            entry_key = entry.lower()
-            if entry_key not in seen:
-                seen.add(entry_key)
-                unique_entries.append(entry)
-        hours[wd] = unique_entries
+                hours[wd] = [fallback[:150]]
 
     return {
         "name": name,
