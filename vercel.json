@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "functions": {
+    "api/main.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/pools", "destination": "/api/main.py" }
+  ]
+}
