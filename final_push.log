@@ -26,3 +26,28 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 [2] Adding all changes...
+
+[3] Committing...
+[main 91d48dd] feat: improve UI, add GitHub Actions, prepare Vercel deployment
+ 11 files changed, 5135 insertions(+), 29 deletions(-)
+ create mode 100644 .github/workflows/scrape.yml
+ create mode 100644 cleanup.log
+ create mode 100644 cleanup.sh
+ create mode 100644 cleanup_aggressive.log
+ create mode 100644 cleanup_aggressive.sh
+ create mode 100644 final_push.log
+ create mode 100644 final_push.sh
+ create mode 100644 start_frontend_dev.sh
+
+[4] Pushing to GitHub...
+To https://github.com/seetiger1/BBB
+   e4f3fd2..91d48dd  main -> main
+
+[5] Final log:
+91d48dd feat: improve UI, add GitHub Actions, prepare Vercel deployment
+e4f3fd2 chore: update .gitignore to exclude deps, caches, venv
+07fae35 chore: update .gitignore to exclude deps, caches, venv
+c677509 Fix: remove node_modules and ignore it
+d3f4f76 Update: scaffold and initial implementation
+
+=== Complete ===
