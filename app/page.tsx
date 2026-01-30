@@ -12,20 +12,40 @@ type Pool = {
 export default function Page() {
   const [pools, setPools] = useState<Pool[] | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [rawResponse, setRawResponse] = useState<string | null>(null)
 
   // Allow overriding API base in development via NEXT_PUBLIC_API_BASE.
   // If not set, a relative URL is used so deployment on Vercel works out of the box.
   const API_BASE = (process.env.NEXT_PUBLIC_API_BASE as string) || ""
+  const fetchUrl = `${API_BASE}/api/pools`
 
   useEffect(() => {
-    fetch(`${API_BASE}/api/pools`)
-      .then((res) => {
-        if (!res.ok) throw new Error(res.statusText)
-        return res.json()
-      })
-      .then((data) => setPools(data))
-      .catch((err) => setError(String(err)))
-  }, [])
+    let mounted = true
+    const load = async () => {
+      try {
+        const res = await fetch(fetchUrl)
+        setRawResponse(`status:${res.status} statusText:${res.statusText}`)
+        if (!res.ok) {
+          const text = await res.text()
+          if (!mounted) return
+          setRawResponse(text)
+          setError(`HTTP ${res.status} ${res.statusText}`)
+          return
+        }
+        const data = await res.json()
+        if (!mounted) return
+        setPools(data)
+      } catch (err: any) {
+        if (!mounted) return
+        setError(err?.message ?? String(err))
+      }
+    }
+
+    load()
+    return () => {
+      mounted = false
+    }
+  }, [fetchUrl])
 
   if (error) return <div>Fehler: {error}</div>
   if (!pools) return <div>Lade...</div>
