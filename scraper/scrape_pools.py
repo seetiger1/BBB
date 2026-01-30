@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List
@@ -66,8 +67,8 @@ def parse_pool(url: str) -> Dict:
     The parser is defensive: it attempts several heuristics and never raises
     on missing expected nodes — instead it keeps readable fallbacks.
     
-    Hours are collected as lists (multiple entries per day, e.g., different times
-    for regular hours vs. holidays).
+    Hours are collected as lists (multiple entries per day, extracted by looking
+    for time patterns like "06:30-08:00" combined with adjacent weekday names).
     """
     try:
         html = fetch_page(url)
@@ -99,25 +100,51 @@ def parse_pool(url: str) -> Dict:
     # Hours: collect ALL entries per weekday (not just the first)
     hours: Dict[str, List[str]] = {wd: [] for wd in WEEKDAYS}
 
-    # Search for rows/items that contain weekday names + their hours
-    for tr in soup.find_all(["tr", "li", "p", "div"]):
-        text = tr.get_text(separator=" ", strip=True)
-        if not text or len(text) < 5:
+    # Pattern to match times: HH:MM-HH:MM (with optional "Uhr" after)
+    # Example: "06:30 - 08:00 Uhr öffentl. Schwimmen"
+    time_pattern = re.compile(r'\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}')
+
+    # Get all text nodes and process them smartly
+    for element in soup.find_all(['tr', 'li', 'p', 'td', 'div']):
+        element_text = element.get_text(separator=" ", strip=True)
+        if not element_text or len(element_text) < 5:
             continue
-        
-        # Check if this element mentions a weekday
+
+        # Check if this element contains a time pattern (HH:MM-HH:MM)
+        if not time_pattern.search(element_text):
+            continue
+
+        # If it contains a time pattern, check for weekday names
         for wd in WEEKDAYS:
-            if wd.lower() in text.lower():
-                # Found entry for this weekday — add it to the list
-                hours[wd].append(text)
+            if wd.lower() in element_text.lower():
+                # Extract a clean line with just the relevant info
+                # Remove multiple spaces and reduce clutter
+                clean_text = re.sub(r'\s+', ' ', element_text).strip()
+                
+                # If line is too long (> 200 chars), try to extract just the meaningful part
+                if len(clean_text) > 200:
+                    # Extract weekday + time + type info only
+                    match = re.search(
+                        rf'{wd}.*?(\d{{1,2}}:\d{{2}}\s*-\s*\d{{1,2}}:\d{{2}}.*?)(?:{"|".join(WEEKDAYS[WEEKDAYS.index(wd)+1:])}|$)',
+                        element_text,
+                        re.IGNORECASE | re.DOTALL
+                    )
+                    if match:
+                        clean_text = f"{wd} {match.group(1).strip()}"
+                    else:
+                        # Fallback: just keep up to 150 chars after weekday mention
+                        idx = element_text.lower().index(wd.lower())
+                        clean_text = element_text[idx:min(idx+150, len(element_text))].strip()
+                
+                hours[wd].append(clean_text)
                 break
-    
+
     # If no hours found, try fallback
     if not any(hours.values()):
-        fallback = extract_text_near_label(soup, ["Öffnungszeiten", "Öffnungszeit", "Öffnen"])[:2000]
-        # assign same fallback to all weekdays
-        for wd in WEEKDAYS:
-            if fallback:
+        fallback = extract_text_near_label(soup, ["Öffnungszeiten", "Öffnungszeit", "Öffnen"])[:500]
+        # assign same fallback to all weekdays (last resort only)
+        if fallback:
+            for wd in WEEKDAYS:
                 hours[wd] = [fallback]
 
     return {
