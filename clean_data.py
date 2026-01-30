@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Clean up pools.json by extracting ONLY the relevant times for each weekday."""
+"""
+Super-strict data cleaning: Extract ONLY complete, non-redundant time entries.
+Pattern: "HH:MM - HH:MM Uhr DESCRIPTION" (one per line, no duplicates)
+"""
 import json
 import re
 from pathlib import Path
+from collections import OrderedDict
 
 data_path = Path("/workspaces/BBB/data/pools.json")
 
@@ -12,95 +16,87 @@ with open(data_path, "r", encoding="utf-8") as f:
 
 WEEKDAYS = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"]
 
-def extract_day_times(text: str, day: str) -> list:
+def extract_clean_times(raw_text: str) -> list:
     """
-    Extract ONLY the times that belong to a specific weekday.
+    Extract ONLY complete time entries from raw text.
+    Pattern: "HH:MM - HH:MM Uhr DESCRIPTION" or "HH:MM-HH:MM Uhr DESCRIPTION"
     
-    Pattern: Look for the day name, then capture times until the next day or a stop marker.
-    Example: "Montag 06:30-08:00 Uhr öffentl. Schwimmen 08:00-22:00 Uhr nur Schul-..."
-    Should extract: ["06:30-08:00 Uhr öffentl. Schwimmen", "08:00-22:00 Uhr nur Schul-..."]
-    But ONLY up to the next weekday or stop marker like "Einlass", "Tag", etc.
+    Examples that should match:
+    - "06:30 - 08:00 Uhr öffentl. Schwimmen"
+    - "08:00 - 22:00 Uhr nur Schul-, Vereins-, Kursbetrieb"
+    - "10:30-17:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
+    - "Geschlossen"
     """
-    if not text or day not in text:
+    if not raw_text:
         return []
     
-    # Find all occurrences of this day
-    results = []
-    day_lower = day.lower()
-    text_lower = text.lower()
+    # Clean up: remove excessive whitespace, tabs, newlines
+    cleaned = re.sub(r'[\n\t\r]+', ' ', raw_text)
+    cleaned = re.sub(r'\s+', ' ', cleaned).strip()
     
-    # Find the position of this day
-    start_idx = 0
-    while True:
-        pos = text_lower.find(day_lower, start_idx)
-        if pos == -1:
-            break
-        
-        # Find the end: either the next weekday or end of string
-        end_idx = len(text)
-        for other_day in WEEKDAYS:
-            if other_day != day:
-                next_pos = text_lower.find(other_day.lower(), pos + len(day))
-                if next_pos != -1 and next_pos < end_idx:
-                    end_idx = next_pos
-        
-        # Extract segment
-        segment = text[pos:end_idx].strip()
-        
-        # Now extract individual time entries from this segment
-        # Pattern: TIME RANGE (HH:MM-HH:MM) followed by description until next time or end
-        time_pattern = re.compile(r'(\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}[^0-9]*?)(?=\d{1,2}:\d{2}|$)', re.DOTALL)
-        
-        for match in time_pattern.finditer(segment):
-            time_entry = match.group(1).strip()
-            # Clean up excessive whitespace/newlines
-            time_entry = re.sub(r'\s+', ' ', time_entry)
-            # If still too long (> 200 chars), truncate
-            if len(time_entry) > 200:
-                time_entry = time_entry[:200] + "..."
-            if time_entry and '00' in time_entry[:5]:  # Ensure it starts with HH:MM
-                results.append(time_entry)
-        
-        start_idx = pos + 1
+    times = []
+    seen = set()  # Track to avoid duplicates
     
-    return results if results else []
+    # Pattern 1: "HH:MM - HH:MM Uhr DESCRIPTION" or "HH:MM-HH:MM Uhr DESCRIPTION"
+    time_pattern = re.compile(
+        r'(\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}\s*Uhr\s+[^,]*?)(?=\d{1,2}:\d{2}\s*[-–]|\s*(?:Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)|$)',
+        re.IGNORECASE
+    )
+    
+    for match in time_pattern.finditer(cleaned):
+        entry = match.group(1).strip()
+        
+        # Remove leading weekday name if present
+        entry = re.sub(r'^(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)\s+', '', entry, flags=re.IGNORECASE)
+        entry = entry.strip()
+        
+        # Only keep if it's not too short and contains time pattern
+        if len(entry) > 5 and re.search(r'\d{1,2}:\d{2}', entry):
+            # Limit length to 120 chars (reasonable line length)
+            if len(entry) > 120:
+                entry = entry[:120].rsplit(' ', 1)[0]  # Truncate at word boundary
+            
+            # Deduplicate (case-insensitive)
+            entry_key = entry.lower()
+            if entry_key not in seen:
+                times.append(entry)
+                seen.add(entry_key)
+    
+    # Pattern 2: Check for "Geschlossen"
+    if re.search(r'geschlossen', cleaned, re.IGNORECASE):
+        if 'Geschlossen' not in times:
+            times.append('Geschlossen')
+    
+    return times
 
 # Clean each pool
 for pool in pools:
+    print(f"\n📍 {pool['name']}")
+    
     for day in WEEKDAYS:
         entries = pool["hours"].get(day, [])
         if not isinstance(entries, list):
             entries = [entries]
         
-        cleaned = []
-        for entry in entries:
-            if isinstance(entry, str):
-                # Extract only the times relevant to THIS day
-                day_specific = extract_day_times(entry, day)
-                cleaned.extend(day_specific)
+        # Combine all entries for this day into one text
+        combined_text = " ".join(str(e) for e in entries if e)
         
-        # If no times found, keep original if it's short
-        if not cleaned:
-            for entry in entries:
-                if isinstance(entry, str) and len(entry) < 100:
-                    cleaned.append(entry)
-        
+        # Extract clean times
+        cleaned = extract_clean_times(combined_text)
         pool["hours"][day] = cleaned
+        
+        # Debug output
+        if cleaned:
+            print(f"  ✅ {day}: {len(cleaned)} entry(ies)")
+            for entry in cleaned:
+                preview = entry[:90] + "..." if len(entry) > 90 else entry
+                print(f"     → {preview}")
+        else:
+            print(f"  ⚠️  {day}: (no data)")
 
 # Save cleaned data
 with open(data_path, "w", encoding="utf-8") as f:
     json.dump(pools, f, ensure_ascii=False, indent=2)
 
-print(f"✅ Cleaned {len(pools)} pools!")
-print("\nOpening hours per pool:")
-for pool in pools:
-    print(f"\n  {pool['name']}:")
-    for day in WEEKDAYS:
-        entries = pool["hours"].get(day, [])
-        if entries:
-            print(f"    {day}: {len(entries)} entry(ies)")
-            for entry in entries[:1]:  # Show first entry only
-                preview = entry[:80] + "..." if len(entry) > 80 else entry
-                print(f"      → {preview}")
-        else:
-            print(f"    {day}: (no data)")
+print(f"\n✅ Done! Cleaned {len(pools)} pools and saved to {data_path}")
+
