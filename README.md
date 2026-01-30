@@ -48,18 +48,37 @@ npm run dev
 Hinweis: Das Frontend ruft `/api/pools` relativ ab; in Entwicklung können API (Port 8000) und Frontend (Port 3000) getrennt laufen — für lokale Tests ist es praktisch, `uvicorn` auf Port 3000 zu starten oder ein kleines Proxy-Setup zu verwenden.
 
 ## Deployment auf Vercel
-- Dieses Repo ist als Mono-Repo für Vercel vorbereitet. `vercel.json` enthält eine einfache Funktionseinstellung, damit `api/main.py` als Python-Funktion ausgeführt werden kann.
-- Vercel-Workflow:
-  - Frontend (`app/`) wird als Next.js-App deployed.
-  - `api/main.py` wird als Python Serverless Function deployed und über die Rewrite-Regel unter `/api/pools` erreichbar.
+
+1. **Repo mit Vercel verbinden:**
+   - Gehe zu https://vercel.com/new
+   - Wähle dein GitHub-Repo (seetiger1/BBB)
+   - Vercel erkennt Next.js automatisch
+   - Deploy-Settings: Default reichen aus
+
+2. **Nach dem Deploy:**
+   - Frontend läuft unter `https://<your-vercel-url>.vercel.app`
+   - API ist unter `https://<your-vercel-url>.vercel.app/api/pools` erreichbar
+   - `NEXT_PUBLIC_API_BASE` bleibt leer (relativer Pfad)
+   - `data/pools.json` wird bei jedem Deploy neu kopiert
+
+3. **Important:** `data/pools.json` muss vor dem Deploy via GitHub Actions automatisch aktualisiert werden (siehe Automation)
 
 ## Automatisierung (Cron / CI)
-- Geplante Updates sollten den Scraper regelmäßig (z. B. täglich) ausführen und die erzeugte `data/pools.json` in den Repo-Branch committen.
-- In GitHub Actions wäre ein Job möglich, der:
-  1. Python installiert
-  2. `pip install -r requirements.txt`
-  3. `python scraper/scrape_pools.py --file urls.txt`
-  4. `git commit` & `git push` (oder push in einen branch/PR)
+
+GitHub Actions läuft täglich um 02:00 UTC (`.github/workflows/scrape.yml`):
+- Installiert Python-Abhängigkeiten
+- Führt `scraper/scrape_pools.py --file urls.txt` aus
+- Validiert das erzeugte JSON
+- Committed & pusht `data/pools.json` (nur bei Änderungen)
+
+**Aktivierung:**
+- Datei `.github/workflows/scrape.yml` ist bereits im Repo
+- Actions sind standardmäßig aktiv — prüfe unter "Actions" im Repo
+
+**Manueller Trigger** (optional):
+```bash
+# Gehe zu GitHub → Actions → "Daily Pool Scraper" → "Run workflow"
+```
 
 ## Hinweise & Grenzen
 - Der Scraper versucht, Seitenstruktur-Änderungen toleranter zu behandeln, kann aber keine Garantie für 100% exakte Extraktion geben — bei größeren Änderungen sind Anpassungen nötig.

@@ -1,0 +1,66 @@
+=== Aggressive Git History Cleanup ===
+Date: Fri Jan 30 06:33:48 UTC 2026
+
+[1] Showing commits before cleanup:
+* 78ad9eb chore: update .gitignore to exclude deps, caches, venv
+* f3feeb8 chore: update .gitignore to exclude deps, caches, venv
+* 8b64606 Fix: remove node_modules and ignore it
+* 14cb857 Update: scaffold and initial implementation
+* 4323839 Scaffold: scraper, API, frontend, data and config
+* 44b5ee3 Initial commit
+
+[2] Removing node_modules from ALL commits using filter-branch...
+WARNING: git-filter-branch has a glut of gotchas generating mangled history
+	 rewrites.  Hit Ctrl-C before proceeding to abort, then use an
+	 alternative filtering tool such as 'git filter-repo'
+	 (https://github.com/newren/git-filter-repo/) instead.  See the
+	 filter-branch manual page for more details; to squelch this warning,
+	 set FILTER_BRANCH_SQUELCH_WARNING=1.
+Proceeding with filter-branch...
+
+Rewrite 44b5ee3273b2d2034b2b30ebe06e0be22f0742eb (1/6) (0 seconds passed, remaining 0 predicted)    Rewrite 432383914f00923a17f329f23df7b9acf8529529 (2/6) (0 seconds passed, remaining 0 predicted)    Rewrite 14cb857e8aa626dcd3622b580f1d289c90d99087 (3/6) (0 seconds passed, remaining 0 predicted)    Rewrite 8b64606a1688c93e8f1ef6e8ac94faad59992753 (4/6) (4 seconds passed, remaining 2 predicted)    Rewrite f3feeb8b4346d196fd27018c5afdbc515454efaa (4/6) (4 seconds passed, remaining 2 predicted)    Rewrite 78ad9ebe28bd4a6fb96e5dec155c13f50a738eda (6/6) (4 seconds passed, remaining 0 predicted)    
+Ref 'refs/heads/main' was rewritten
+
+[3] Removing .next from ALL commits...
+WARNING: git-filter-branch has a glut of gotchas generating mangled history
+	 rewrites.  Hit Ctrl-C before proceeding to abort, then use an
+	 alternative filtering tool such as 'git filter-repo'
+	 (https://github.com/newren/git-filter-repo/) instead.  See the
+	 filter-branch manual page for more details; to squelch this warning,
+	 set FILTER_BRANCH_SQUELCH_WARNING=1.
+Proceeding with filter-branch...
+
+Rewrite 8cf06bad1a74b90b5ce54f35720c085f8111c398 (1/6) (0 seconds passed, remaining 0 predicted)    Rewrite bc90653cbe3c86e6e48cd9a8f342e6c0a6317238 (2/6) (0 seconds passed, remaining 0 predicted)    Rewrite ffd44670d9b990cc6fbfb59970a3c70104677367 (3/6) (1 seconds passed, remaining 1 predicted)    Rewrite 2ec1d1fb8340eae21902790c2f228afeee3aad20 (3/6) (1 seconds passed, remaining 1 predicted)    Rewrite caac803abae56077a032b9b5ec6613965fef9f77 (3/6) (1 seconds passed, remaining 1 predicted)    Rewrite 3a0bc95eefbc7e6bfdf44d3e71050dbec4fef60c (3/6) (1 seconds passed, remaining 1 predicted)    
+Ref 'refs/heads/main' was rewritten
+
+[4] Force-removing __pycache__ from index (if any):
+No __pycache__ to remove
+
+[5] Git status after aggressive cleanup:
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 6 and 2 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	cleanup.log
+	cleanup.sh
+	cleanup_aggressive.log
+	cleanup_aggressive.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+[6] Showing commits after cleanup:
+* e4f3fd2 chore: update .gitignore to exclude deps, caches, venv
+* 07fae35 chore: update .gitignore to exclude deps, caches, venv
+* c677509 Fix: remove node_modules and ignore it
+* d3f4f76 Update: scaffold and initial implementation
+* bc90653 Scaffold: scraper, API, frontend, data and config
+* 8cf06ba Initial commit
+
+[7] Force-pushing (--force-with-lease)...
+To https://github.com/seetiger1/BBB
+ + 4323839...e4f3fd2 main -> main (forced update)
+
+=== Aggressive Cleanup Complete ===
