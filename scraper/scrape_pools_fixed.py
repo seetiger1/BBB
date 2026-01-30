@@ -106,6 +106,11 @@ def parse_pool(url: str) -> Dict:
         # Extract the chunk for this weekday
         chunk = hours_text[start_pos:end_pos]
         
+        # Check if this section contains "Geschlossen"
+        if 'geschlossen' in chunk.lower():
+            hours[weekday].append("Geschlossen")
+            continue
+        
         # Find all times in chunk: HH:MM - HH:MM followed by description
         time_pattern = re.compile(
             r'(\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}(?:\s+[Uu]hr)?(?:\s+[^;,\n]{0,80})?)',
