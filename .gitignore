@@ -14,6 +14,7 @@ node_modules/
 npm-debug.log
 yarn-error.log
 .next/
+.vercel/
 
 # IDE
 .vscode/
@@ -31,3 +32,4 @@ yarn-error.log
 # Misc
 .git/
 .gitignore
+*.log
