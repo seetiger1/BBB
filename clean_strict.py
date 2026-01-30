@@ -23,16 +23,15 @@ WEEKDAYS = [
 
 def is_valid_entry(entry: str) -> bool:
     """Check if entry is a valid opening hours entry."""
-    if not entry or len(entry) < 10:
+    if not entry or len(entry) < 8:
         return False
     
-    # Must have time pattern HH:MM - HH:MM
-    if not re.search(r'\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}', entry):
+    # Must have time pattern HH:MM - HH:MM (or HH:MM-HH:MM)
+    if not re.search(r'\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}', entry):
         return False
     
-    # Must have "Uhr"
-    if 'uhr' not in entry.lower():
-        return False
+    # Should ideally have "Uhr" but accept if it clearly looks like times
+    # (sometimes description is missing)
     
     return True
 

@@ -62,11 +62,12 @@ def extract_text_near_label(soup: BeautifulSoup, label_keywords: List[str]) -> s
 
 
 def parse_pool(url: str) -> Dict:
-    """Parse a single pool page with STRUCTURAL table parsing.
+    """Parse pool hours from HTML.
     
-    Key improvement: Uses column-based approach instead of row scanning.
-    Each <table> column = one weekday. Multiple entries per day separated by <br> or newlines.
-    This guarantees NO mixing of weekday data.
+    Strategy: Ignore complex table structure, just look for text patterns:
+    "WEEKDAY_NAME ... HH:MM - HH:MM Uhr DESCRIPTION"
+    
+    Extract entries by searching for weekday names followed by times.
     """
     try:
         html = fetch_page(url)
@@ -98,116 +99,72 @@ def parse_pool(url: str) -> Dict:
     # Initialize hours
     hours: Dict[str, List[str]] = {wd: [] for wd in WEEKDAYS}
 
-    # Pattern to extract time entries: HH:MM - HH:MM Uhr DESCRIPTION
-    time_pattern = re.compile(r'\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}\s*Uhr')
+    # Get all text from page, normalized
+    full_text = soup.get_text(separator="\n", strip=True)
+    
+    # Normalize: reduce excessive whitespace
+    full_text = re.sub(r'\n\s*\n+', '\n', full_text)  # remove blank lines
+    full_text = re.sub(r'[ \t]+', ' ', full_text)      # normalize spaces
 
-    # STRUCTURAL APPROACH: Find table and use column indexing
-    tables = soup.find_all('table')
+    # Pattern: One or more time entries for a weekday
+    # Looking for: "WEEKDAY ... TIME - TIME Uhr DESCRIPTION"
+    # Strategy: For each weekday, extract all times that follow it until next weekday
     
-    for table in tables:
-        # Get header row to map columns to weekdays
-        header_row = table.find('thead')
-        if not header_row:
-            header_row = table.find('tr')
+    for i, weekday in enumerate(WEEKDAYS):
+        # Find all occurrences of this weekday
+        lines = full_text.split('\n')
         
-        if not header_row:
-            continue
+        in_weekday_section = False
+        weekday_entries = []
         
-        # Extract header cells (should contain weekday names)
-        header_cells = header_row.find_all(['th', 'td'])
-        if not header_cells:
-            continue
-        
-        # Map column index → weekday
-        column_to_day = {}
-        for col_idx, header_cell in enumerate(header_cells):
-            header_text = header_cell.get_text(strip=True).lower()
-            for weekday in WEEKDAYS:
-                if weekday.lower() in header_text:
-                    column_to_day[col_idx] = weekday
-                    break
-        
-        if not column_to_day:
-            # No valid weekday headers found, try next table
-            continue
-        
-        # Now process all rows in tbody (skip thead)
-        tbody = table.find('tbody')
-        if tbody:
-            data_rows = tbody.find_all('tr')
-        else:
-            # Fallback: use all rows after header
-            all_rows = table.find_all('tr')
-            data_rows = all_rows[1:] if len(all_rows) > 1 else []
-        
-        # Extract time entries from each cell
-        for row in data_rows:
-            cells = row.find_all(['td', 'th'])
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
             
-            for col_idx, cell in enumerate(cells):
-                if col_idx not in column_to_day:
-                    continue
+            # Check if line contains current weekday
+            if weekday.lower() in line.lower():
+                in_weekday_section = True
+                # Extract times from this line
+                times = extract_times_from_line(line, weekday)
+                weekday_entries.extend(times)
+            
+            # Check if we hit the next weekday
+            elif in_weekday_section:
+                next_wd_found = False
+                for other_wd in WEEKDAYS:
+                    if other_wd.lower() in line.lower() and other_wd != weekday:
+                        next_wd_found = True
+                        break
                 
-                weekday = column_to_day[col_idx]
-                
-                # Get cell text, splitting by <br> to handle multiple entries
-                cell_lines = []
-                for line in cell.stripped_strings:
-                    line = line.strip()
-                    if line:
-                        cell_lines.append(line)
-                
-                # Also check for explicit <br> separation
-                br_chunks = []
-                for br in cell.find_all('br'):
-                    # Get text before br
-                    prev_text = ""
-                    elem = br.previous_sibling
-                    while elem:
-                        if isinstance(elem, str):
-                            prev_text = elem.strip() + prev_text
-                        elem = elem.previous_sibling
-                    if prev_text:
-                        br_chunks.append(prev_text)
-                
-                # Combine approaches
-                all_text = " ".join(cell_lines)
-                
-                # Split by newlines or multiple spaces (indicating separate entries)
-                entries_raw = re.split(r'[\n;]|\s{2,}', all_text)
-                
-                # Process each potential entry
-                for entry_raw in entries_raw:
-                    entry = entry_raw.strip()
-                    if not entry:
-                        continue
-                    
-                    # Must contain a time pattern
-                    if not time_pattern.search(entry):
-                        continue
-                    
-                    # Clean entry
-                    entry = re.sub(r'\s+', ' ', entry).strip()
-                    
-                    # Remove weekday name if accidentally included
-                    entry = re.sub(rf'^({"|".join(WEEKDAYS)})\s*', '', entry, flags=re.IGNORECASE).strip()
-                    
-                    # Limit length but keep at word boundary
-                    if len(entry) > 150:
-                        entry = entry[:150].rsplit(' ', 1)[0]
-                    
-                    # Add if valid and new
-                    if len(entry) >= 10:
-                        entry_lower = entry.lower()
-                        if not any(e.lower() == entry_lower for e in hours[weekday]):
-                            hours[weekday].append(entry)
-    
-    # Fallback if no table found
+                if next_wd_found:
+                    in_weekday_section = False
+                else:
+                    # Still in weekday section, try to extract times
+                    times = extract_times_from_line(line, weekday)
+                    if times:
+                        weekday_entries.extend(times)
+        
+        # Deduplicate and add to hours
+        seen = set()
+        for entry in weekday_entries:
+            entry_lower = entry.lower()
+            if entry_lower not in seen:
+                seen.add(entry_lower)
+                hours[weekday].append(entry)
+
+    # If still nothing found, fallback to simple pattern search
     if not any(hours.values()):
-        fallback = extract_text_near_label(soup, ["Öffnungszeiten", "Öffnungszeit", "Öffnen"])[:500]
-        if fallback:
-            for wd in WEEKDAYS:
-                hours[wd] = [fallback[:150]]
+        fallback = extract_text_near_label(soup, ["Öffnungszeiten", "Öffnungszeit"])[:1000]
+        # Try basic extraction from fallback
+        for wd in WEEKDAYS:
+            pattern = rf'{wd}.*?(\d{{1,2}}:\d{{2}}\s*-\s*\d{{1,2}}:\d{{2}}\s*Uhr\s+[^;]{{0,100}})'
+            matches = re.findall(pattern, fallback, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                entry = match.strip()
+                entry = re.sub(r'\s+', ' ', entry)
+                if len(entry) > 10:
+                    hours[wd].append(entry)
 
     return {
         "name": name,
@@ -215,6 +172,35 @@ def parse_pool(url: str) -> Dict:
         "source_url": url,
         "fetched_at": datetime.now(timezone.utc).isoformat(),
     }
+
+
+def extract_times_from_line(line: str, expected_weekday: str) -> List[str]:
+    """Extract all time entries from a single line."""
+    # Pattern: HH:MM - HH:MM Uhr DESCRIPTION
+    pattern = re.compile(
+        r'(\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2}\s*[Uu]hr\s+[^;,]*?)(?=\d{1,2}:\d{2}\s*[-–]|;|,|$)',
+    )
+    
+    matches = pattern.findall(line)
+    results = []
+    
+    for match in matches:
+        entry = match.strip()
+        
+        # Remove weekday name if present
+        entry = re.sub(rf'^({"|".join(WEEKDAYS)})\s*', '', entry, flags=re.IGNORECASE).strip()
+        
+        # Normalize whitespace
+        entry = re.sub(r'\s+', ' ', entry)
+        
+        # Limit length
+        if len(entry) > 150:
+            entry = entry[:150].rsplit(' ', 1)[0]
+        
+        if len(entry) >= 10:  # must be substantial
+            results.append(entry)
+    
+    return results
 
 
 def write_json(data: List[Dict]) -> None:
