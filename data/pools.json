@@ -2,126 +2,311 @@
   {
     "name": "Schwimmhalle Fischerinsel",
     "hours": {
-      "Montag": [],
+      "Montag": [
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr gemischt",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende",
+        "10:00 - 17:00 Uhr gemischt Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30 Minuten"
+      ],
       "Dienstag": [
         "06:30 - 08:00 Uhr öffentl. Schwimmen",
-        "06:30 - 16:00 Uhr öffentl. Schwimmen"
+        "10:30 - 17:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr gemischt",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende",
+        "10:00 - 17:00 Uhr gemischt Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30 Minuten"
       ],
       "Mittwoch": [
-        "10:00 - 16:00 Uhr öffentl. Schwimmen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr gemischt",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende",
+        "10:00 - 17:00 Uhr gemischt Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30 Minuten"
       ],
       "Donnerstag": [
         "06:30 - 08:00 Uhr öffentl. Schwimmen",
-        "06:30 - 16:00 Uhr öffentl. Schwimmen"
+        "10:30 - 17:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr gemischt",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende",
+        "10:00 - 17:00 Uhr gemischt Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30 Minuten"
       ],
       "Freitag": [
         "06:30 - 08:00 Uhr öffentl. Schwimmen",
-        "06:30 - 16:00 Uhr öffentl. Schwimmen"
+        "10:30 - 17:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr gemischt",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende",
+        "10:00 - 17:00 Uhr gemischt Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30 Minuten"
       ],
       "Samstag": [
         "10:30 - 17:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 16:00 Uhr öffentl. Schwimmen",
         "10:30 - 17:30 Uhr öffentl. Schwimmen",
-        "10:30 - 17:30 Uhr gemischt"
+        "10:30 - 17:30 Uhr gemischt",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende",
+        "10:00 - 17:00 Uhr gemischt Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30 Minuten"
       ],
       "Sonntag": [
-        "10:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
-        "10:00 - 17:00 Uhr öffentl. Schwimmen",
-        "10:00 - 17:00 Uhr gemischt"
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr öffentl. Schwimmen",
+        "10:30 - 17:30 Uhr gemischt",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende",
+        "10:00 - 17:00 Uhr gemischt Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30 Minuten"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-01-30T07:15:22.892127+00:00"
+    "fetched_at": "2026-01-30T08:43:01.661135+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
     "hours": {
-      "Montag": [],
-      "Dienstag": [],
-      "Mittwoch": [
-        "06:45 - 12:00 Uhr Menschen mit Behinderung"
+      "Montag": [
+        "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 20:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "20:00 - 22:30 Uhr öffentl. Schwimmen",
+        "11:00 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen",
+        "06:45 - 12:00 Uhr Menschen mit Behinderung",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ],
-      "Donnerstag": [],
+      "Dienstag": [
+        "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 20:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "20:00 - 22:30 Uhr öffentl. Schwimmen",
+        "11:00 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen",
+        "06:45 - 12:00 Uhr Menschen mit Behinderung",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
+      ],
+      "Mittwoch": [
+        "06:30 - 20:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "20:00 - 22:30 Uhr öffentl. Schwimmen",
+        "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "11:00 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen",
+        "06:45 - 12:00 Uhr Menschen mit Behinderung",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
+      ],
+      "Donnerstag": [
+        "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "11:00 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen",
+        "06:45 - 12:00 Uhr Menschen mit Behinderung",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
+      ],
       "Freitag": [
-        "11:00 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
+        "11:00 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen",
+        "06:45 - 12:00 Uhr Menschen mit Behinderung",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ],
       "Samstag": [
-        "10:00 - 18:00 Uhr öffentl. Schwimmen"
+        "10:00 - 18:00 Uhr öffentl. Schwimmen",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen",
+        "06:45 - 12:00 Uhr Menschen mit Behinderung",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ],
       "Sonntag": [
-        "10:00 - 18:00 Uhr öffentl. Schwimmen"
+        "19:30 - 22:00 Uhr öffentl. Schwimmen",
+        "06:45 - 12:00 Uhr Menschen mit Behinderung",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-01-30T07:15:23.103371+00:00"
+    "fetched_at": "2026-01-30T08:43:01.907909+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
     "hours": {
-      "Montag": [],
+      "Montag": [
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
+      ],
       "Dienstag": [
-        "06:30 - 08:00 Uhr öffentl. Schwimmen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ],
       "Mittwoch": [
-        "06:30 - 08:00 Uhr öffentl. Schwimmen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ],
       "Donnerstag": [
-        "07:00 - 16:00 Uhr öffentl. Schwimmen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ],
       "Freitag": [
-        "06:30 - 08:00 Uhr öffentl. Schwimmen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ],
       "Samstag": [
-        "10:00 - 17:00 Uhr öffentl. Schwimmen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ],
       "Sonntag": [
-        "10:00 - 17:00 Uhr öffentl. Schwimmen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-01-30T07:15:23.547892+00:00"
+    "fetched_at": "2026-01-30T08:43:02.352760+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
     "hours": {
-      "Montag": [],
+      "Montag": [
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "08:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen",
+        "06:30 - 15:30 Uhr öffentl. Schwimmen",
+        "15:30 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende"
+      ],
       "Dienstag": [
-        "06:30 - 16:00 Uhr öffentl. Schwimmen"
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "08:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen",
+        "06:30 - 15:30 Uhr öffentl. Schwimmen",
+        "15:30 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende"
       ],
       "Mittwoch": [
         "10:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
-        "10:00 - 22:00 Uhr öffentl. Schwimmen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "08:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen",
+        "06:30 - 15:30 Uhr öffentl. Schwimmen",
+        "15:30 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende"
       ],
       "Donnerstag": [
         "06:30 - 08:00 Uhr öffentl. Schwimmen",
-        "06:30 - 16:00 Uhr öffentl. Schwimmen"
+        "08:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen",
+        "06:30 - 15:30 Uhr öffentl. Schwimmen",
+        "15:30 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende"
       ],
       "Freitag": [
         "06:30 - 08:00 Uhr öffentl. Schwimmen",
-        "06:30 - 15:30 Uhr öffentl. Schwimmen"
+        "08:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen",
+        "06:30 - 15:30 Uhr öffentl. Schwimmen",
+        "15:30 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende"
       ],
       "Samstag": [
         "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
-        "09:00 - 17:00 Uhr öffentl. Schwimmen"
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen",
+        "06:30 - 15:30 Uhr öffentl. Schwimmen",
+        "15:30 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende"
       ],
       "Sonntag": [
-        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
-        "09:00 - 17:00 Uhr öffentl. Schwimmen"
+        "06:30 - 16:00 Uhr öffentl. Schwimmen",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen",
+        "06:30 - 15:30 Uhr öffentl. Schwimmen",
+        "15:30 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen Einlass - und Kassenschluss: 60 Minuten vor Ende der Öffnungszeit. Badeschluss: 30",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass - und Kassenschluss: 60 Minuten vor Ende"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-01-30T07:15:23.762828+00:00"
+    "fetched_at": "2026-01-30T08:43:02.595944+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
     "hours": {
-      "Montag": [],
-      "Dienstag": [],
-      "Mittwoch": [
-        "06:30 - 08:00 Uhr öffentl. Schwimmen"
+      "Montag": [
+        "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
-      "Donnerstag": [],
+      "Dienstag": [
+        "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
+      ],
+      "Mittwoch": [
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
+      ],
+      "Donnerstag": [
+        "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
+      ],
       "Freitag": [
-        "06:30 - 08:00 Uhr öffentl. Schwimmen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen",
+        "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Samstag": [
         "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
@@ -129,6 +314,6 @@
       "Sonntag": []
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-01-30T07:15:23.947402+00:00"
+    "fetched_at": "2026-01-30T08:43:02.778452+00:00"
   }
 ]
