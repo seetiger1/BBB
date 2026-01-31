@@ -3,158 +3,160 @@
     "name": "Schwimmhalle Fischerinsel",
     "hours": {
       "Montag": [
-        "06:30 - 08:00 öffentl. Schwimmen",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Dienstag": [
-        "06:30 - 08:00 öffentl. Schwimmen",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Mittwoch": [
-        "10:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "10:00 - 22:00 Uhr nur Schul-"
       ],
       "Donnerstag": [
-        "06:30 - 08:00 öffentl. Schwimmen",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Freitag": [
-        "06:30 - 08:00 öffentl. Schwimmen",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Samstag": [
-        "10:30 - 17:30 öffentl. Schwimmen (eingeschr. WF)"
+        "10:30 - 17:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Sonntag": [
         "Geschlossen"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-01-30T11:25:47.032775+00:00"
+    "fetched_at": "2026-01-31T03:55:41.882959+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
     "hours": {
       "Montag": [
-        "06:30 - 22:30 öffentl. Schwimmen (eingeschr. WF)"
+        "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Dienstag": [
-        "06:30 - 22:30 öffentl. Schwimmen (eingeschr. WF)"
+        "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Mittwoch": [
-        "06:30 - 20:00 öffentl. Schwimmen (eingeschr. WF)",
-        "20:00 - 22:30 öffentl. Schwimmen"
+        "06:30 - 20:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 20:00 - 22:30 Uhr öffentl. S"
       ],
       "Donnerstag": [
-        "06:30 - 22:30 öffentl. Schwimmen (eingeschr. WF)"
+        "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Freitag": [
-        "11:00 - 22:30 öffentl. Schwimmen (eingeschr. WF)"
+        "11:00 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Samstag": [
-        "10:00 - 18:00 öffentl. Schwimmen"
+        "10:00 - 18:00 Uhr öffentl. Schwimmen"
       ],
       "Sonntag": [
-        "10:00 - 18:00 öffentl. Schwimmen",
-        "17:00 - 19:30 Menschen mit Behinderung",
-        "19:30 - 22:00 öffentl. Schwimmen"
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Einlass- und Kassenschluss: 60 Minuten vor Ende der Öffnungsz",
+        "06:45 - 17:00 Uhr nur Schul-",
+        "17:00 - 19:30 Uhr öffentl. Schwimmen nur für Menschen mit Behinderung",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen Dienstag Dienstag 06:45 - 17:00 Uhr nur Schul-",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen Mittwoch Mittwoch 06:45 - 12:00 Uhr Menschen mit Behinderung",
+        "12:00 - 17:00 Uhr nur Schul-",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen Donnerstag Donnerstag 06:45 - 17:00 Uhr nur Schul-",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen Freitag Freitag 11:00 - 15:00 Uhr nur Schul-",
+        "15:00 - 19:30 Uhr öffentl. Schwimmen nur für Menschen mit Behinderung",
+        "19:30 - 22:00 Uhr öffentl. Schwimmen Samstag Samstag 10:00 - 17:30 Uhr öffentl. Schwimmen nur für",
+        "10:00 - 17:30 Uhr öffentl. Schwimmen nur für Menschen mit Behinderung",
+        "18:30 - 19:15 Kurs Aqua Basic Kurs endet am 06.07.26 In den Ferien ja Montag Uhrzeit 19:30 - 2",
+        "19:30 - 20:15 Kurs Aqua Basic Kurs endet am 09.07.26 In den Ferien ja Donnerstag Uhrzeit 20:30"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-01-30T11:25:47.247286+00:00"
+    "fetched_at": "2026-01-31T03:55:42.960342+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
     "hours": {
       "Montag": [
-        "Geschlossen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Dienstag": [
-        "Geschlossen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Mittwoch": [
-        "Geschlossen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Donnerstag": [
-        "Geschlossen"
+        "07:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-"
       ],
       "Freitag": [
-        "Geschlossen"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Samstag": [
-        "Geschlossen"
+        "10:00 - 17:00 Uhr öffentl. Schwimmen"
       ],
       "Sonntag": [
-        "Geschlossen"
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass- und Kassenschluss: 60 Minuten vor Ende der Öffnungsz"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-01-30T11:25:47.444984+00:00"
+    "fetched_at": "2026-01-31T03:55:43.775043+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
     "hours": {
       "Montag": [
-        "06:30 - 08:00 öffentl. Schwimmen",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Dienstag": [
-        "06:30 - 16:00 öffentl. Schwimmen",
-        "16:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-"
       ],
       "Mittwoch": [
-        "10:00 - 22:00 öffentl. Schwimmen (eingeschr. WF)"
+        "10:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Donnerstag": [
-        "06:30 - 08:00 öffentl. Schwimmen",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Freitag": [
-        "06:30 - 08:00 öffentl. Schwimmen",
-        "08:00 - 22:00 öffentl. Schwimmen (eingeschr. WF)"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wass"
       ],
       "Samstag": [
-        "09:00 - 17:00 öffentl. Schwimmen (eingeschr. WF)"
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Sonntag": [
-        "06:30 - 16:00 öffentl. Schwimmen",
-        "09:00 - 17:00 öffentl. Schwimmen (eingeschr. WF)",
-        "10:00 - 22:00 öffentl. Schwimmen"
+        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass- und Kassenschluss:",
+        "06:30 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-",
+        "10:00 - 22:00 Uhr öffentl. Schwimmen Donnerstag Donnerstag 06:30 - 16:00 Uhr öffentl. Schwimmen 16",
+        "06:30 - 15:30 Uhr öffentl. Schwimmen 15:30 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wass",
+        "09:00 - 17:00 Uhr öffentl. Schwimmen Sonntag Sonntag 09:00 - 17:00 Uhr öffentl. Schwimmen Einlass-",
+        "16:00 - 16:45 Kurs Aqua Vital Kurs endet am 08.07.26 In den Ferien nein Mittwoch Uhrzeit 17:00",
+        "14:00 - 14:45 Kurs Aqua To the Limit Kurs endet am 04.07.26 In den Ferien nein Samstag Uhrzeit",
+        "15:00 - 15:45 Kurs Aqua Rückenfit Kurs endet am 04.07.26 In den Ferien nein Bilder aus dem Bad Uhr"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-01-30T11:25:47.648542+00:00"
+    "fetched_at": "2026-01-31T03:55:44.662365+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
     "hours": {
       "Montag": [
-        "12:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "12:00 - 22:00 Uhr nur Schul-"
       ],
       "Dienstag": [
-        "06:30 - 08:00 öffentl. Schwimmen (eingeschr. WF)",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Mittwoch": [
-        "06:30 - 08:00 öffentl. Schwimmen",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Donnerstag": [
-        "06:30 - 08:00 öffentl. Schwimmen (eingeschr. WF)",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Freitag": [
-        "06:30 - 08:00 öffentl. Schwimmen",
-        "08:00 - 22:00 nur Schul-/Vereins-/Kursbetrieb"
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Samstag": [
-        "07:00 - 12:00 öffentl. Schwimmen (eingeschr. WF)"
+        "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 12:00 - 22:00 Uhr nur Schul-"
       ],
       "Sonntag": [
-        "06:30 - 07:30 Uhr",
-        "08:30 - 18:00 nur Schul-/Vereins-/Kursbetrieb"
+        "08:30 - 18:00 Uhr nur Schul-",
+        "06:30 - 07:30 Uhr"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-01-30T11:25:47.850519+00:00"
+    "fetched_at": "2026-01-31T03:55:45.541333+00:00"
   }
 ]
