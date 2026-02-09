@@ -25,7 +25,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-02-08T04:24:17.332933+00:00"
+    "fetched_at": "2026-02-09T04:13:53.439902+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -65,7 +65,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-02-08T04:24:18.289872+00:00"
+    "fetched_at": "2026-02-09T04:13:53.946485+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -93,7 +93,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-02-08T04:24:19.108271+00:00"
+    "fetched_at": "2026-02-09T04:13:54.475093+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -117,18 +117,11 @@
         "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Sonntag": [
-        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass- und Kassenschluss:",
-        "06:30 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-",
-        "10:00 - 22:00 Uhr öffentl. Schwimmen Donnerstag Donnerstag 06:30 - 16:00 Uhr öffentl. Schwimmen 16",
-        "06:30 - 15:30 Uhr öffentl. Schwimmen 15:30 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wass",
-        "09:00 - 17:00 Uhr öffentl. Schwimmen Sonntag Sonntag 09:00 - 17:00 Uhr öffentl. Schwimmen Einlass-",
-        "16:00 - 16:45 Kurs Aqua Vital Kurs endet am 08.07.26 In den Ferien nein Mittwoch Uhrzeit 17:00",
-        "14:00 - 14:45 Kurs Aqua To the Limit Kurs endet am 04.07.26 In den Ferien ja Samstag Uhrzeit 1",
-        "5:00 - 15:45 Kurs Aqua Rückenfit Kurs endet am 04.07.26 In den Ferien ja Bilder aus dem Bad 5 Uhr"
+        "Geschlossen"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-02-08T04:24:19.905209+00:00"
+    "fetched_at": "2026-02-09T04:13:55.535772+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -157,6 +150,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-02-08T04:24:20.807034+00:00"
+    "fetched_at": "2026-02-09T04:13:56.171957+00:00"
   }
 ]
