@@ -25,7 +25,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-02-09T04:13:53.439902+00:00"
+    "fetched_at": "2026-02-10T04:22:18.517264+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -65,35 +65,38 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-02-09T04:13:53.946485+00:00"
+    "fetched_at": "2026-02-10T04:22:19.805153+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
     "hours": {
       "Montag": [
-        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
+        "08:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-"
       ],
       "Dienstag": [
-        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
+        "08:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-"
       ],
       "Mittwoch": [
-        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
+        "08:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-"
       ],
       "Donnerstag": [
-        "07:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-"
+        "08:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-"
       ],
       "Freitag": [
-        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
+        "08:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-"
       ],
       "Samstag": [
         "10:00 - 17:00 Uhr öffentl. Schwimmen"
       ],
       "Sonntag": [
-        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass- und Kassenschluss: 60 Minuten vor Ende der Öffnungsz"
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass- und Kassenschluss: 60 Minuten vor Ende der Öffnungsz",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Sonntag Sonntag 10:00 - 17:00 Uhr öffentl. Schwimmen Einlass-"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-02-09T04:13:54.475093+00:00"
+    "fetched_at": "2026-02-10T04:22:20.873558+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -102,7 +105,7 @@
         "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Dienstag": [
-        "06:30 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-"
+        "06:30 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wass"
       ],
       "Mittwoch": [
         "10:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
@@ -121,7 +124,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-02-09T04:13:55.535772+00:00"
+    "fetched_at": "2026-02-10T04:22:21.682899+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -150,6 +153,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-02-09T04:13:56.171957+00:00"
+    "fetched_at": "2026-02-10T04:22:22.673581+00:00"
   }
 ]
