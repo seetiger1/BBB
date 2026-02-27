@@ -26,7 +26,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-02-26T04:04:54.209972+00:00"
+    "fetched_at": "2026-02-27T04:01:18.774676+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -64,7 +64,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-02-26T04:04:55.183638+00:00"
+    "fetched_at": "2026-02-27T04:01:19.633079+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -92,7 +92,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-02-26T04:04:56.062622+00:00"
+    "fetched_at": "2026-02-27T04:01:20.608007+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -116,14 +116,11 @@
         "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Sonntag": [
-        "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass- und Kassenschluss:",
-        "16:00 - 16:45 Kurs Aqua Vital Kurs endet am 08.07.26 In den Ferien nein Mittwoch Uhrzeit 17:00",
-        "14:00 - 14:45 Kurs Aqua To the Limit Kurs endet am 04.07.26 In den Ferien ja Samstag Uhrzeit 1",
-        "5:00 - 15:45 Kurs Aqua Rückenfit Kurs endet am 04.07.26 In den Ferien ja Bilder aus dem Bad 5 Uhr"
+        "Geschlossen"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-02-26T04:04:57.166225+00:00"
+    "fetched_at": "2026-02-27T04:01:21.449967+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -155,6 +152,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-02-26T04:04:57.986496+00:00"
+    "fetched_at": "2026-02-27T04:01:22.513224+00:00"
   }
 ]
