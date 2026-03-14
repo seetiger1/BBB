@@ -26,7 +26,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-03-13T04:00:42.913879+00:00"
+    "fetched_at": "2026-03-14T03:59:29.856484+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -66,7 +66,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-03-13T04:00:44.064255+00:00"
+    "fetched_at": "2026-03-14T03:59:30.474362+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -98,7 +98,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-03-13T04:00:44.928971+00:00"
+    "fetched_at": "2026-03-14T03:59:31.291832+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -136,7 +136,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-03-13T04:00:46.195573+00:00"
+    "fetched_at": "2026-03-14T03:59:31.963860+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -157,6 +157,11 @@
         "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Samstag": [
+        "07:00 - 10:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Wettkampf 21.03.26 - 21.03.2",
+        "07:00 - 11:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Öffnungszeiten Hallenbad Öff",
+        "12:00 - 22:00 Uhr nur Schul-",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 08:00 - 22:00 Uhr nur Schul-",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-",
         "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 12:00 - 22:00 Uhr nur Schul-"
       ],
       "Sonntag": [
@@ -165,6 +170,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-03-13T04:00:47.320201+00:00"
+    "fetched_at": "2026-03-14T03:59:32.842456+00:00"
   }
 ]
