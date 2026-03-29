@@ -26,7 +26,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-03-28T04:07:41.700871+00:00"
+    "fetched_at": "2026-03-29T04:26:56.955953+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -65,7 +65,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-03-28T04:07:42.954305+00:00"
+    "fetched_at": "2026-03-29T04:26:57.752555+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -92,11 +92,12 @@
         "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass- und Kassenschluss: 60 Minuten vor Ende der Öffnungsz",
         "07:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-",
         "10:00 - 17:00 Uhr öffentl. Schwimmen Samstag Samstag 10:00 - 17:00 Uhr öffentl. Schwimmen Sonntag",
-        "10:00 - 17:00 Uhr öffentl. Schwimmen Dienstag Dienstag 07:00 - 16:00 Uhr öffentl. Schwimmen 16:00"
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Dienstag Dienstag 07:00 - 16:00 Uhr öffentl. Schwimmen 16:00",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schu"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-03-28T04:07:44.044699+00:00"
+    "fetched_at": "2026-03-29T04:26:58.372941+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -131,7 +132,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-03-28T04:07:45.234421+00:00"
+    "fetched_at": "2026-03-29T04:26:59.171447+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -160,6 +161,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-03-28T04:07:46.473736+00:00"
+    "fetched_at": "2026-03-29T04:27:00.200451+00:00"
   }
 ]
