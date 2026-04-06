@@ -22,11 +22,17 @@
         "10:30 - 17:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Sonntag": [
-        "Geschlossen"
+        "10:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass- und Kassenschluss:",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Dienstag Dienstag 06:30 - 08:30 Uhr öffentl. Schwimmen 08:30",
+        "13:15 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-",
+        "10:00 - 14:15 Uhr nur Schul-",
+        "14:15 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-",
+        "06:30 - 08:30 Uhr öffentl. Schwimmen 08:30 - 13:15 Uhr nur Schul-",
+        "10:30 - 17:30 Uhr öffentl. Schwimmen Sonntag Sonntag 10:00 - 17:00 Uh"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-04-05T04:26:26.891891+00:00"
+    "fetched_at": "2026-04-06T04:33:21.069672+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -67,7 +73,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-04-05T04:26:27.991537+00:00"
+    "fetched_at": "2026-04-06T04:33:21.762693+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -91,11 +97,14 @@
         "10:00 - 17:00 Uhr öffentl. Schwimmen"
       ],
       "Sonntag": [
-        "Geschlossen"
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Einlass- und Kassenschluss: 60 Minuten vor Ende der Öffnungsz",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Dienstag Dienstag 07:00 - 16:00 Uhr öffentl. Schwimmen 16:00",
+        "07:00 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-",
+        "10:00 - 17:00 Uhr öffentl. Schwimmen Sonntag Sonntag 10:00 - 17:00 Uhr öffentl. Schwimmen Einlass-"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-04-05T04:26:28.798740+00:00"
+    "fetched_at": "2026-04-06T04:33:22.627207+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -120,18 +129,17 @@
       ],
       "Sonntag": [
         "09:00 - 17:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Einlass- und Kassenschluss:",
-        "06:30 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-",
-        "06:30 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr öffentl. Schwimmen mit eingeschränkter Wass",
-        "10:00 - 22:00 Uhr öffentl. Schwimmen Donnerstag Donnerstag 06:30 - 16:00 Uhr öffentl. Schwimmen 16",
-        "09:00 - 17:00 Uhr öffentl. Schwimmen Samstag Samstag 09:00 - 14:00 Uhr öffentl. Schwimmen 14:00 -",
-        "16:00 - 17:00 Uhr öffentl. Schwimmen Sonntag Sonntag 09:00 - 17:00 Uhr öffentl. Schwimmen Einlass-",
         "09:00 - 17:00 Uhr öffentl. Schwimmen Dienstag Dienstag 06:30 - 14:30 Uhr öffentl. Schwimmen 14:30",
         "20:00 - 22:00 Uhr öffentl. Schwimmen Mittwoch Mittwoch 10:00 - 11:00 Uhr öffentl. Schwimmen 11:00",
-        "15:00 - 22:00 Uhr öffentl. Schwimmen Donnerstag Donnerstag 06:30 - 16:00 Uhr öffentl. Schwimmen 16"
+        "15:00 - 22:00 Uhr öffentl. Schwimmen Donnerstag Donnerstag 06:30 - 16:00 Uhr öffentl. Schwimmen 16",
+        "06:30 - 22:00 Uhr öffentl. Schwimmen Samstag Samstag 09:00 - 14:00 Uhr öffentl. Schwimmen 14:00 -",
+        "16:00 - 17:00 Uhr öffentl. Schwimmen Sonntag Sonntag 09:00 - 15:00 Uhr öffentl. Schwimmen 15:00 -",
+        "16:00 - 17:00 Uhr öffentl. Schwimmen Einlass- und Kassenschluss: 60 Minuten vor Ende der Öffnungsz",
+        "16:00 - 16:45 Kurs Aqua Vital Kurs endet am 08.0 Uhr"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-04-05T04:26:29.372145+00:00"
+    "fetched_at": "2026-04-06T04:33:23.285545+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -163,6 +171,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-04-05T04:26:30.194091+00:00"
+    "fetched_at": "2026-04-06T04:33:24.275671+00:00"
   }
 ]
