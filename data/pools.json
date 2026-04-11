@@ -28,11 +28,11 @@
         "10:00 - 14:15 Uhr nur Schul-",
         "14:15 - 16:00 Uhr öffentl. Schwimmen 16:00 - 22:00 Uhr nur Schul-",
         "06:30 - 08:30 Uhr öffentl. Schwimmen 08:30 - 13:15 Uhr nur Schul-",
-        "10:30 - 17:30 Uhr öffentl. Schwimmen Sonntag Sonntag 10:00 - 17:00 Uh"
+        "10:30 - 17:30 Uhr öffentl. Schwimmen Sonntag Sonntag 10:00 - 1"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-04-10T04:36:02.371631+00:00"
+    "fetched_at": "2026-04-11T04:09:41.067337+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -70,7 +70,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-04-10T04:36:03.025549+00:00"
+    "fetched_at": "2026-04-11T04:09:42.067747+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -101,7 +101,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-04-10T04:36:03.873787+00:00"
+    "fetched_at": "2026-04-11T04:09:42.618362+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -132,11 +132,11 @@
         "06:30 - 22:00 Uhr öffentl. Schwimmen Samstag Samstag 09:00 - 14:00 Uhr öffentl. Schwimmen 14:00 -",
         "16:00 - 17:00 Uhr öffentl. Schwimmen Sonntag Sonntag 09:00 - 15:00 Uhr öffentl. Schwimmen 15:00 -",
         "16:00 - 17:00 Uhr öffentl. Schwimmen Einlass- und Kassenschluss: 60 Minuten vor Ende der Öffnungsz",
-        "16:00 - 16:45 Kurs Aqua Vital Kurs endet am 08.0 Uhr"
+        "16:00 - 16:45 Kurs Aqua Vital Kurs endet Uhr"
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-04-10T04:36:04.871258+00:00"
+    "fetched_at": "2026-04-11T04:09:43.292121+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -168,6 +168,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-04-10T04:36:05.685564+00:00"
+    "fetched_at": "2026-04-11T04:09:44.245667+00:00"
   }
 ]
