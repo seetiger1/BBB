@@ -25,7 +25,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-05-02T04:49:37.423148+00:00"
+    "fetched_at": "2026-05-03T05:19:12.890673+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -53,7 +53,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-05-02T04:49:38.698791+00:00"
+    "fetched_at": "2026-05-03T05:19:13.908533+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -81,7 +81,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-05-02T04:49:39.365528+00:00"
+    "fetched_at": "2026-05-03T05:19:14.736895+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -115,7 +115,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-05-02T04:49:40.374013+00:00"
+    "fetched_at": "2026-05-03T05:19:15.818940+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -136,7 +136,12 @@
         "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Samstag": [
-        "Geschlossen"
+        "07:00 - 10:30 Uhr öffentl. Schwimmen 10:30 - 22:00 Uhr nur Schul-",
+        "07:00 - 22:00 Uhr nur Schul-",
+        "12:00 - 22:00 Uhr nur Schul-",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 08:00 - 22:00 Uhr nur Schul-",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-",
+        "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 12:00 - 22:00 Uhr nur Schul-"
       ],
       "Sonntag": [
         "08:30 - 18:00 Uhr nur Schul-",
@@ -144,6 +149,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-05-02T04:49:41.538297+00:00"
+    "fetched_at": "2026-05-03T05:19:16.816244+00:00"
   }
 ]
