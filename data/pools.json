@@ -25,12 +25,13 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-05-06T05:17:09.758104+00:00"
+    "fetched_at": "2026-05-07T05:20:00.337614+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
     "hours": {
       "Montag": [
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Öffnungszeiten Hallenbad Öffnungszeiten 10.09.25 - 08.07.26 T",
         "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Dienstag": [
@@ -40,6 +41,10 @@
         "06:30 - 20:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 20:00 - 22:30 Uhr öffentl. S"
       ],
       "Donnerstag": [
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Pfingstmontag 25.05.26 - 25.05.26 Hallenbad Pfingstmontag 25",
+        "10:00 - 18:00 Uhr öffentl. Schwimmen Öffnungszeiten Hallenbad Öffnungszeiten 10.09.25 - 08.07.26 T",
+        "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Dienstag Dienstag 06:30 - 22",
+        "06:30 - 20:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 20:00 - 22:30 Uhr öffentl. S",
         "06:30 - 22:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche"
       ],
       "Freitag": [
@@ -53,7 +58,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-05-06T05:17:10.410570+00:00"
+    "fetched_at": "2026-05-07T05:20:01.022215+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -81,7 +86,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-05-06T05:17:11.179245+00:00"
+    "fetched_at": "2026-05-07T05:20:01.553821+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -115,7 +120,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-05-06T05:17:11.719163+00:00"
+    "fetched_at": "2026-05-07T05:20:02.201303+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -149,6 +154,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-05-06T05:17:12.288319+00:00"
+    "fetched_at": "2026-05-07T05:20:02.682420+00:00"
   }
 ]
