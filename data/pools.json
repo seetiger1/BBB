@@ -3,10 +3,10 @@
     "name": "Schwimmhalle Fischerinsel",
     "hours": {
       "Montag": [
-        "10:30 - 17:30 Uhr öffentl. Schwimmen Veränderte Öffnungszeiten 01.05.26 - 03.07.26 Hallenbad Verän",
-        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
+        "10:30 - 17:30 Uhr öffentl. Schwimmen"
       ],
       "Dienstag": [
+        "06:30 - 16:00 Uhr öffentl. Schwimmen Veränderte Öffnungszeiten 01.05.26 - 03.07.26 Hallenbad Verän",
         "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Mittwoch": [
@@ -26,7 +26,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-05-18T06:01:06.091860+00:00"
+    "fetched_at": "2026-05-19T05:56:10.417526+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -55,7 +55,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-05-18T06:01:07.000861+00:00"
+    "fetched_at": "2026-05-19T05:56:11.108515+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -83,7 +83,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-05-18T06:01:07.731664+00:00"
+    "fetched_at": "2026-05-19T05:56:11.702073+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -112,7 +112,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-05-18T06:01:08.645100+00:00"
+    "fetched_at": "2026-05-19T05:56:12.390149+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -141,6 +141,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-05-18T06:01:09.600117+00:00"
+    "fetched_at": "2026-05-19T05:56:13.291845+00:00"
   }
 ]
