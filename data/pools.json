@@ -26,7 +26,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-fischerinsel/",
-    "fetched_at": "2026-05-19T05:56:10.417526+00:00"
+    "fetched_at": "2026-05-20T05:55:27.852075+00:00"
   },
   {
     "name": "Schwimm- und Sprunghalle im Europasportpark (SSE)",
@@ -55,7 +55,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimm-und-sprunghalle-im-europasportpark-sse/",
-    "fetched_at": "2026-05-19T05:56:11.108515+00:00"
+    "fetched_at": "2026-05-20T05:55:28.939427+00:00"
   },
   {
     "name": "Schwimmhalle Kreuzberg",
@@ -83,7 +83,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/schwimmhalle-kreuzberg/",
-    "fetched_at": "2026-05-19T05:56:11.702073+00:00"
+    "fetched_at": "2026-05-20T05:55:29.685341+00:00"
   },
   {
     "name": "Stadtbad Tiergarten",
@@ -112,7 +112,7 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/stadtbad-tiergarten/",
-    "fetched_at": "2026-05-19T05:56:12.390149+00:00"
+    "fetched_at": "2026-05-20T05:55:30.364411+00:00"
   },
   {
     "name": "Sport- und Lehrschwimmhalle Schöneberg",
@@ -133,6 +133,10 @@
         "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 08:00 - 22:00 Uhr nur Schul-"
       ],
       "Samstag": [
+        "07:00 - 10:30 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche Öffnungszeiten Hallenbad Öff",
+        "12:00 - 22:00 Uhr nur Schul-",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 08:00 - 22:00 Uhr nur Schul-",
+        "06:30 - 08:00 Uhr öffentl. Schwimmen 08:00 - 22:00 Uhr nur Schul-",
         "07:00 - 12:00 Uhr öffentl. Schwimmen mit eingeschränkter Wasserfläche 12:00 - 22:00 Uhr nur Schul-"
       ],
       "Sonntag": [
@@ -141,6 +145,6 @@
       ]
     },
     "source_url": "https://www.berlinerbaeder.de/baeder/detail/sport-und-lehrschwimmhalle-schoeneberg/",
-    "fetched_at": "2026-05-19T05:56:13.291845+00:00"
+    "fetched_at": "2026-05-20T05:55:31.295778+00:00"
   }
 ]
