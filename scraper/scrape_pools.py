@@ -164,17 +164,24 @@ def extract_hours_from_text_fallback(full_text: str) -> Dict[str, List[str]]:
         
         start_pos = match.start()
         
-        # Find the next weekday or end of section
-        end_pos = len(hours_text)
+        # Limit lookahead to prevent grabbing excessive text at end of file
+        end_pos = min(len(hours_text), start_pos + 400)
         
-        # Look only at the NEXT weekday (not all future weekdays)
+        # Look for the next weekday to mark the boundary
         if weekday_idx + 1 < len(WEEKDAYS):
             next_wd = WEEKDAYS[weekday_idx + 1]
             next_pattern = re.compile(rf'\b{next_wd}\b', re.IGNORECASE)
             next_match = next_pattern.search(hours_text, start_pos + len(weekday))
-            if next_match:
+            if next_match and next_match.start() < end_pos:
                 end_pos = next_match.start()
-        
+        else:
+            # For Sunday, look for Monday to detect if a new block starts
+            next_wd = WEEKDAYS[0]
+            next_pattern = re.compile(rf'\b{next_wd}\b', re.IGNORECASE)
+            next_match = next_pattern.search(hours_text, start_pos + len(weekday))
+            if next_match and next_match.start() < end_pos:
+                end_pos = next_match.start()
+
         # Extract chunk for this weekday only
         chunk = hours_text[start_pos:end_pos]
         
